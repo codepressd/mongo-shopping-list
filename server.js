@@ -44,7 +44,6 @@ app.get('/items', function(req, res) {
                 message: 'Internal Server Error'
             });
         }
-        //console.log(items);
         res.json(items);
     });
 });
@@ -69,7 +68,6 @@ app.put('/items/:id', function(req, res){
     var query = { _id: req.body.id}
 
     Item.findOneAndUpdate(query,{name: req.body.name}, function(err, item) {
-        console.log('What is the item',item);
         if (err) {
             return res.status(500).json({
                 message: 'Internal Server Error'
