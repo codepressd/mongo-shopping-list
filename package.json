@@ -4,7 +4,7 @@
   "description": "Little mongo shopping list",
   "main": "server.js",
   "scripts": {
-    "test": "mocha spec"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "keywords": [
     "shopping",
